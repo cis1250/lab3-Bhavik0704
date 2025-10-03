@@ -14,4 +14,6 @@ else:
   print("The Fibonacci sequence is:\n")
   for i in range(terms + 1):
     print(num_1)
-    num_1, num_2 = num_1, num_2 + num_2
+    num_1, num_2 = num_2, num_1 + num_2
+
+
