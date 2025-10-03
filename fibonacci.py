@@ -11,9 +11,9 @@ terms = int(input("How many terms of the Fibonacci sequence would you like to se
 if terms <= 0:
   print("Invalid number, please try again.")
 else:  
-  print("The Fibonacci sequence is:\n")
+  print("The Fibonacci sequence is: ", end="")
   for i in range(terms + 1):
-    print(num_1)
+    print(num_1, end=", ")
     num_1, num_2 = num_2, num_1 + num_2
 
 
