@@ -35,7 +35,21 @@ while (is_sentence(user_sentence) == False):
     print("This does not meet the criteria for a sentence.")
     user_input = input("Enter a sentence: ")
 
-total_words = re.findall(r'\b\w+\b', user_sentence.lower())
-individual_words = []
+new_sentence = user_sentence.lower().rstrip(".!?")
+individual_words = new_sentence.split()
 
+unique_words = []
+frequency = []
+
+for word in individual_words:
+    if word in unique_words:
+        indexed = unique_words.index(word)
+        frequency[indexed] += 1
+    else:
+        unique_words.append(word)
+        frequency.append(1)
+
+print("\nThe word frequencies are:")
+for i in range(len(unique_words)):
+    print(unique_words[i], frequency[i])
     
